@@ -1,0 +1,11 @@
+.content {
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  ion-button {
+    width: 60%;
+    max-width: 250px;
+  }
+}
