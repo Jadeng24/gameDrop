@@ -1,15 +1,38 @@
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Welcome to Game Drop</ion-card-title>
-    </ion-card-header>
+<ion-content [fullscreen]="true">
+  <ion-slides #mySlider pager="true" [options]="slideOpts">
+    <ion-slide class="slide1">
 
-    <ion-card-content class="content">
-      <img src="./../../assets/gdLogoBlack.png" alt="logo" class="logo">
-      <h1>Game Drop</h1>
-      <ion-button [routerLink]="['/tabs']">Start Using Game Drop</ion-button>
-      <ion-button color="secondary" [routerLink]="['/tabs/chat']">Start a Chat</ion-button>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Welcome to Game Drop</ion-card-title>
+        </ion-card-header>
 
-    </ion-card-content>
-  </ion-card>
+        <ion-card-content class="content" style="background: red">
+          <img src="./../../assets/gdLogoBlue.png" alt="logo" class="logo">
+          <h1>Game Drop</h1>
+
+          <h3>Pick your color theme</h3>
+          <div fxLayout="column" fxFlex="100" fxLayoutAlign="space-between">
+            <ion-button (click)="enableDark()">Dark</ion-button>
+            <ion-button (click)="enableLight()">Light</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+
+
+
+
+
 </ion-content>
+
+<!-- <ion-button [routerLink]="['/tabs']">Start Using Game Drop</ion-button>
+      <ion-button color="secondary" [routerLink]="['/tabs/chat']">Start a Chat</ion-button> -->

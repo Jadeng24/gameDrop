@@ -1,8 +1,11 @@
+.swiper-container {
+  height: 95%;
+}
+.slide1 ion-card {
+  min-height: 90%;
+  min-width: 50%;
+}
 .content {
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   .logo {
     max-width: 250px;
     margin: 20px 0px;

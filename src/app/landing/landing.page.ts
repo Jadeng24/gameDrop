@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ThemeService } from '../services/theme.service';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-landing',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.page.scss'],
 })
 export class LandingPage implements OnInit {
+  @ViewChild('mySlider', { static: true }) slides: IonSlides;
+  constructor(private themeService: ThemeService) { }
 
-  constructor() { }
+  public slideOpts = {
+    initialSlide: 0,
+    speed: 400
+  };
 
   ngOnInit() {
+
+  }
+  enableDark() {
+    this.themeService.enableDark();
+    this.slides.slideNext();
+  }
+
+  enableLight() {
+    this.themeService.enableLight();
+    this.slides.slideNext();
   }
 
 }
