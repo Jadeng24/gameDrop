@@ -1,7 +1,8 @@
 {
-  "name": "gameAlly",
+  "name": "gameDrop",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

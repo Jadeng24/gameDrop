@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "gameAlly",
+  "appName": "gameDrop",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

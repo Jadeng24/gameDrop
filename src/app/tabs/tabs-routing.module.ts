@@ -8,7 +8,7 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'ally',
+        path: 'tab1',
         children: [
           {
             path: '',
@@ -18,7 +18,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'chat',
+        path: 'tab2',
         children: [
           {
             path: '',
@@ -28,7 +28,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'profile',
+        path: 'tab3',
         children: [
           {
             path: '',
@@ -39,7 +39,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/ally',
+        redirectTo: '/tabs/tab1',
         pathMatch: 'full'
       }
     ]

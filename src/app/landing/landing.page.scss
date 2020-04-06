@@ -1,9 +1,17 @@
 .content {
   display:flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-
+  .logo {
+    max-width: 250px;
+    margin: 20px 0px;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
   ion-button {
     width: 60%;
     max-width: 250px;
