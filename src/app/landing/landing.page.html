@@ -3,20 +3,25 @@
     <ion-slide class="slide1">
 
       <ion-card>
+        <!-- <span> -->
         <ion-card-header>
-          <ion-card-title>Welcome to Game Drop</ion-card-title>
+          <ion-card-title>Welcome to <br />Game Drop</ion-card-title>
         </ion-card-header>
 
-        <ion-card-content class="content" style="background: red">
+        <ion-card-content class="content">
           <img src="./../../assets/gdLogoBlue.png" alt="logo" class="logo">
-          <h1>Game Drop</h1>
 
-          <h3>Pick your color theme</h3>
-          <div fxLayout="column" fxFlex="100" fxLayoutAlign="space-between">
-            <ion-button (click)="enableDark()">Dark</ion-button>
-            <ion-button (click)="enableLight()">Light</ion-button>
-          </div>
+
+
         </ion-card-content>
+        <!-- </span> -->
+        <div class="themeButtons">
+          <h3>Pick your color theme</h3>
+          <span>
+            <ion-button color="medium" (click)="enableLight()" medium>Light</ion-button>
+            <ion-button color="secondary" (click)="enableDark()" medium>Dark</ion-button>
+          </span>
+        </div>
       </ion-card>
 
     </ion-slide>

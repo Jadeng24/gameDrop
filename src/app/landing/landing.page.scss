@@ -2,21 +2,48 @@
   height: 95%;
 }
 .slide1 ion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 90%;
   min-width: 50%;
+  padding: 40px 0px 20px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .slide1 ion-card {
+    width: 96%;
+  }
 }
 .content {
   .logo {
     max-width: 250px;
     margin: 20px 0px;
+    margin-bottom: 60px;
   }
   h1 {
     font-weight: 600;
     font-size: 30px;
     margin-bottom: 40px;
   }
-  ion-button {
-    width: 60%;
-    max-width: 250px;
+}
+.themeButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  span {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    ion-button {
+      width: 30%;
+      max-width: 250px;
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
   }
 }
