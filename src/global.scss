@@ -8,6 +8,56 @@
  * For more information on global stylesheets, visit the documentation:
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  min-height: 25px;
+  min-width: 25px;
+  color: white;
+  // text-shadow:
+	// 	-1px -1px 0 #000,
+	// 	1px -1px 0 #000,
+	// 	-1px 1px 0 #000,
+	// 	1px 1px 0 #000;
+  transition: 2s ease-in-out;
+  transition-delay: 2s;;
+
+  
+  :active {
+    opacity: .9;
+    transform: scale(.96);
+  }
+  > div {
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0px 1px 4px rgba(34, 34, 34, 0.5);
+    border: solid 1px var(--ion-color-primary);
+    background: rgba(34, 34, 34, 0.2);
+    font-size: 14pt;
+    padding: 4px;
+    margin-bottom: 4px; 
+
+    ion-icon {
+      font-size: 24pt;
+    }
+    span {
+      border-radius: 2px;
+      width: calc(100% - 6px);
+      left: 3px;
+      position: absolute;
+      top: 3px;
+      height: 18px;
+      background: rgba(214, 214, 214, 0.18);
+    }
+  }
+}
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
@@ -16,7 +66,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";

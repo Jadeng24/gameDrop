@@ -1,3 +1,50 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+ion-content {
+  .container {
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      var(--ion-color-primary),
+      var(--ion-color-secondary)
+    );
+    padding: 8px;
+    .content {
+      flex-wrap: wrap;
+    }
+    .box {
+      margin-right: 8px;
+      > div {
+        border-radius: 10px;
+        flex-direction: column;
+        width: 130px;
+        height: 180px;
+        max-width: 250px;
+        background: none;
+        border: solid 4px var(--ion-color-primary);
+
+        ion-icon {
+          margin-bottom: 8px;
+        }
+        span {
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+        }
+      }
+      .dice {
+        border: solid 4px var(--ion-color-primary);
+      }
+
+      .timer {
+        border: solid 4px rgba(255, 195, 83, 0.8);
+      }
+      .hourglass {
+        border: solid 4px rgba(255, 69, 69, 0.8);
+      }
+      .draw {
+        border: solid 4px rgba(43, 253, 165, 0.8);
+      }
+    }
+  }
+}
