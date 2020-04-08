@@ -33,17 +33,22 @@ ion-content {
         }
       }
       .dice {
-        border: solid 4px var(--ion-color-primary);
+        border: solid 4px rgba(0, 203, 218, 0.8);
       }
-
+      .score {
+        border: solid 4px rgba(212, 200, 20, 0.8);
+      }
       .timer {
-        border: solid 4px rgba(255, 195, 83, 0.8);
-      }
-      .hourglass {
-        border: solid 4px rgba(255, 69, 69, 0.8);
+        border: solid 4px rgba(212, 66, 241, 0.8);
       }
       .draw {
-        border: solid 4px rgba(43, 253, 165, 0.8);
+        border: solid 4px rgba(253, 144, 41, 0.8);
+      }
+      .backpack {
+        border: solid 4px rgba(112, 80, 255, 0.8);
+      }
+      .coinToss {
+        border: solid 4px rgba(31, 194, 153, 0.8);
       }
     }
   }
