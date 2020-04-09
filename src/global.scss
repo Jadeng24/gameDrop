@@ -22,17 +22,16 @@
   min-width: 25px;
   color: white;
   // text-shadow:
-	// 	-1px -1px 0 #000,
-	// 	1px -1px 0 #000,
-	// 	-1px 1px 0 #000,
-	// 	1px 1px 0 #000;
+  // 	-1px -1px 0 #000,
+  // 	1px -1px 0 #000,
+  // 	-1px 1px 0 #000,
+  // 	1px 1px 0 #000;
   transition: 2s ease-in-out;
-  transition-delay: 2s;;
 
-  
   :active {
-    opacity: .9;
-    transform: scale(.96);
+    // opacity: 0.9;
+    // transform: scale(0.9);
+    animation: buttonAnimate 0.5s linear;
   }
   > div {
     border-radius: 4px;
@@ -42,7 +41,7 @@
     background: rgba(34, 34, 34, 0.2);
     font-size: 14pt;
     padding: 4px;
-    margin-bottom: 4px; 
+    margin-bottom: 4px;
 
     ion-icon {
       font-size: 24pt;
@@ -56,6 +55,20 @@
       height: 18px;
       background: rgba(214, 214, 214, 0.18);
     }
+  }
+}
+
+@keyframes buttonAnimate {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.94);
+    opacity: .7;
+  }
+  100% {
+    transform:  scale(0.93);
+    opacity: .6;
   }
 }
 
