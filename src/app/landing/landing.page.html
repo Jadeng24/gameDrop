@@ -1,7 +1,7 @@
-<ion-content [fullscreen]="true">
-  <ion-slides #mySlider pager="true" [options]="slideOpts">
+<ion-content class="myContent">
+  <ion-slides #mySlider pager="false" [options]="slideOpts">
     <ion-slide class="slide1">
-      <ion-card>
+      <!-- <ion-card>
         <ion-card-header>
           <ion-card-title>Welcome to <br />Game Drop</ion-card-title>
         </ion-card-header>
@@ -9,29 +9,43 @@
         <ion-card-content class="content">
           <img src="./../../assets/gdLogoBlue.png" alt="logo" class="logo">
         </ion-card-content>
-
-        <div class="themeButtons">
-          <h3>Pick your color theme</h3>
-          <span>
-            <ion-button color="medium" (click)="enableLight()" medium>Light</ion-button>
-            <ion-button color="secondary" (click)="enableDark()" medium>Dark</ion-button>
-          </span>
-        </div>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-button [routerLink]="['/tabs']">Start Using Game Drop</ion-button>
-      <ion-button color="secondary" [routerLink]="['/tabs/chat']">Start a Chat</ion-button>
+      </ion-card> -->
+      <ion-content>
+      <app-home></app-home>
+      </ion-content>
     </ion-slide>
     <ion-slide>
-      <h1>Slide 3</h1>
+      <ion-content>
+      <app-recents></app-recents>
+    </ion-content>
     </ion-slide>
+    <ion-slide>
+      <ion-content>
+      <app-settings></app-settings>
+    </ion-content>
+    </ion-slide>
+    
   </ion-slides>
-
-
-
-
 
 </ion-content>
 
+<ion-tabs class="tabs">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="goTo(0)">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="goTo(1)">
+      <ion-icon name="filter-outline"></ion-icon>
+      <ion-label>Recents</ion-label>
+      <!-- <ion-badge>6</ion-badge> -->
+    </ion-tab-button>
+
+    <ion-tab-button (click)="goTo(2)">
+      <ion-icon name="settings-outline"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>

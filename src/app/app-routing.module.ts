@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs/tabs.page';
 
 const routes: Routes = [
 
@@ -8,10 +7,22 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./landing/landing.module').then(m => m.LandingPageModule)
   },
-  {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  // },
+  // {
+  //   path: 'settings',
+  //   loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  // },
+  // {
+  //   path: 'home',
+  //   loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  // },
+  // {
+  //   path: 'recents',
+  //   loadChildren: () => import('./recents/recents.module').then( m => m.RecentsPageModule)
+  // },
 ];
 @NgModule({
   imports: [

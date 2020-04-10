@@ -1,5 +1,14 @@
+.myContent {
+  position: relative;
+  .tabs {
+    position: absolute;
+    bottom: 0px;
+    z-index: 10;
+  }
+}
+
 .swiper-container {
-  height: 95%;
+  height: calc(100% - 57px);
 }
 .slide1 ion-card {
   display: flex;
@@ -10,11 +19,6 @@
   padding: 40px 0px 20px 0px;
 }
 
-@media only screen and (max-width: 600px) {
-  .slide1 ion-card {
-    width: 96%;
-  }
-}
 .content {
   .logo {
     max-width: 250px;
@@ -39,7 +43,7 @@
     width: 100%;
 
     ion-button {
-      width: 30%;
+      // width: 30%;
       max-width: 250px;
       &:first-child {
         margin-right: 16px;

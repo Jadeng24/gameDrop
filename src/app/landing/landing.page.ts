@@ -29,4 +29,9 @@ export class LandingPage implements OnInit {
     this.slides.slideNext();
   }
 
+  goTo(slide: any) {
+    console.log(slide);
+
+    this.slides.slideTo(slide);
+  }
 }

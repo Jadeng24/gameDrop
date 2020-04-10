@@ -6,6 +6,10 @@ import { IonicModule } from '@ionic/angular';
 
 import { LandingPage } from './landing.page';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from '../components/home/home.component';
+import { RecentsComponent } from '../components/recents/recents.component';
+import { SettingsComponent } from '../components/settings/settings.component';
+import { HomeHeaderComponent } from '../components/home-header/home-header.component';
 
 @NgModule({
   imports: [
@@ -15,6 +19,6 @@ import { RouterModule } from '@angular/router';
 
     RouterModule.forChild([{ path: '', component: LandingPage }])
   ],
-  declarations: [LandingPage]
+  declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent, SettingsComponent]
 })
 export class LandingPageModule {}
