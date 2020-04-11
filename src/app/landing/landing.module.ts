@@ -10,6 +10,8 @@ import { HomeComponent } from '../components/home/home.component';
 import { RecentsComponent } from '../components/recents/recents.component';
 import { SettingsComponent } from '../components/settings/settings.component';
 import { HomeHeaderComponent } from '../components/home-header/home-header.component';
+import { DiceComponent } from '../components/dice/dice.component';
+import { ScorekeeperComponent } from '../components/scorekeeper/scorekeeper.component';
 
 @NgModule({
   imports: [
@@ -19,6 +21,7 @@ import { HomeHeaderComponent } from '../components/home-header/home-header.compo
 
     RouterModule.forChild([{ path: '', component: LandingPage }])
   ],
-  declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent, SettingsComponent]
+  declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent, SettingsComponent, DiceComponent, ScorekeeperComponent],
+  entryComponents: [DiceComponent, ScorekeeperComponent]
 })
-export class LandingPageModule {}
+export class LandingPageModule { }

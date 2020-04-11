@@ -3,7 +3,7 @@
     <app-home-header (goTo)="goToPage($event)"></app-home-header>
 
     <div class="flex content">
-      <div class="box">
+      <div class="box" (click)="openComponent(dice)">
         <div class="flex dice">
           <span></span>
           <ion-icon name="cube-outline"></ion-icon>
@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box" (click)="openComponent(scorekeeper)">
         <div class="flex score">
           <span></span>
           <ion-icon name="trophy-outline"></ion-icon>
@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box" (click)="openComponent(dice)">
         <div class="flex timer">
           <span></span>
           <ion-icon name="timer-outline"></ion-icon>
@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box" (click)="openComponent(dice)">
         <div class="flex draw">
           <span></span>
           <ion-icon name="brush-outline"></ion-icon>
@@ -35,14 +35,14 @@
         </div>
       </div>
 
-      <div class="box">
+      <div class="box" (click)="openComponent(dice)">
         <div class="flex backpack">
           <span></span>
           <ion-icon name="library-outline"></ion-icon>
           Inventory
         </div>
       </div>
-      <div class="box">
+      <div class="box" (click)="openComponent(dice)">
         <div class="flex coinToss">
           <span></span>
           <ion-icon name="logo-usd"></ion-icon>

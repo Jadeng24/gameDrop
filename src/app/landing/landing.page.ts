@@ -16,6 +16,7 @@ export class LandingPage implements OnInit {
     speed: 400
   };
   public currentSlide = 0;
+  public newRecentGame: any; // components
 
   ngOnInit() {
     this.themeService.enableDark();
@@ -32,5 +33,9 @@ export class LandingPage implements OnInit {
     }).catch(err => {
       console.error(`Changing Slide Error: ${err}`);
     });
+  }
+
+  addToRecents(event) {
+    this.newRecentGame = event;
   }
 }

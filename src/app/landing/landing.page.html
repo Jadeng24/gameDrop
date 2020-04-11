@@ -3,13 +3,13 @@
     <ion-slide>
       
       <ion-content>
-        <app-home (goTo)="goTo($event)"></app-home>
+        <app-home (goTo)="goTo($event)" (updateRecents)="addToRecents($event)"></app-home>
       </ion-content>
     </ion-slide>
 
     <ion-slide>
       <ion-content>
-        <app-recents></app-recents>
+        <app-recents [newGame]="newRecentGame"></app-recents>
       </ion-content>
     </ion-slide>
 
