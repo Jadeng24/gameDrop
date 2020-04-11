@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home-header',
@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-header.component.scss'],
 })
 export class HomeHeaderComponent implements OnInit {
-
+  @Output() goTo = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  emit() {
+    this.goTo.emit(2);
+  }
 
 }

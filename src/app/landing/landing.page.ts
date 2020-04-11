@@ -15,7 +15,7 @@ export class LandingPage implements OnInit {
     initialSlide: 0,
     speed: 400
   };
-  currentSlide = 0;
+  public currentSlide = 0;
 
   ngOnInit() {
     this.themeService.enableDark();
