@@ -9,7 +9,6 @@ export class ThemeService {
 
   constructor(private rendererFactory: RendererFactory2, @Inject(DOCUMENT) private document: Document) {
     this.renderer = this.rendererFactory.createRenderer(null, null);
-    this.renderer.addClass(this.document.body, 'dark');
   }
 
   enableDark() {
@@ -17,6 +16,8 @@ export class ThemeService {
   }
 
   enableLight() {
-    this.renderer.removeClass(this.document.body, 'dark');
+    console.log('removing dark');
+
+    // this.renderer.removeClass(this.document.body, 'dark');
   }
 }

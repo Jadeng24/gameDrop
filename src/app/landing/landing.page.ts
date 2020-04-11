@@ -15,23 +15,22 @@ export class LandingPage implements OnInit {
     initialSlide: 0,
     speed: 400
   };
+  currentSlide = 0;
 
   ngOnInit() {
-
-  }
-  enableDark() {
     this.themeService.enableDark();
-    this.slides.slideNext();
   }
 
-  enableLight() {
-    this.themeService.enableLight();
-    this.slides.slideNext();
-  }
-
-  goTo(slide: any) {
-    console.log(slide);
-
+  goTo(slide: number) {
     this.slides.slideTo(slide);
+    this.slideChanged(slide);
+  }
+
+  slideChanged(slide?: number) {
+    this.slides.getActiveIndex().then(index => {
+      this.currentSlide = index;
+    }).catch(err => {
+      console.error(`Changing Slide Error: ${err}`);
+    });
   }
 }

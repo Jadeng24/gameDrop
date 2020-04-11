@@ -1,5 +1,5 @@
 <ion-content class="myContent">
-  <ion-slides #mySlider pager="false" [options]="slideOpts">
+  <ion-slides #mySlider pager="false" [options]="slideOpts" (ionSlideDidChange)="slideChanged()">
     <ion-slide class="slide1">
       <!-- <ion-card>
         <ion-card-header>
@@ -31,18 +31,18 @@
 
 <ion-tabs class="tabs">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button (click)="goTo(0)">
+    <ion-tab-button (click)="goTo(0)" [ngClass]="{'activeTab': currentSlide === 0}">
       <ion-icon name="home-outline"></ion-icon>
       <ion-label>Home</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button (click)="goTo(1)">
+    <ion-tab-button (click)="goTo(1)" [ngClass]="{'activeTab': currentSlide === 1}">
       <ion-icon name="filter-outline"></ion-icon>
       <ion-label>Recents</ion-label>
       <!-- <ion-badge>6</ion-badge> -->
     </ion-tab-button>
 
-    <ion-tab-button (click)="goTo(2)">
+    <ion-tab-button (click)="goTo(2)" [ngClass]="{'activeTab': currentSlide === 2}">
       <ion-icon name="settings-outline"></ion-icon>
       <ion-label>Settings</ion-label>
     </ion-tab-button>
