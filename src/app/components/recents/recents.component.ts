@@ -7,6 +7,7 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class RecentsComponent implements OnInit, OnChanges {
   @Input() newGame: any;
+  array = [];
   constructor() { }
 
   ngOnInit() {}
@@ -18,6 +19,7 @@ export class RecentsComponent implements OnInit, OnChanges {
    * Receives a new game history
    */
   public addTo(game) {
+    this.array.push(game);
     console.log(game);
   }
 }

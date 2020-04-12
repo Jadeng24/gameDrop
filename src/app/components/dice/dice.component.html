@@ -1,4 +1,23 @@
-<section class="container">
+<div class=" flex bottomButton">
+  <!-- <ion-button class="toggleDice" (click)="toggleMultiple()">
+    <span *ngIf="showMultiple">Show One Dice</span>
+    <span *ngIf="!showMultiple">Show Two Dice</span>
+  </ion-button> -->
+
+  <!-- fab placed to the bottom and start and on the bottom edge of the content overlapping footer with a list to the right -->
+  <ion-fab vertical="bottom" horizontal="start">
+    <ion-fab-button>
+      <ion-icon name="cube-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button (click)="showMultiple = false">1</ion-fab-button>
+      <ion-fab-button (click)="showMultiple = true">2</ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</div>
+
+<div class="container">
+
   <div class="shaddow"></div>
   <div id="cube" #cubeGesture (swipe)="rollDice($event)">
     <div class="front">
@@ -10,29 +29,112 @@
     </div>
     <div class="right">
       <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
+      <span class="dot dot2"></span>
       <span class="dot dot3"></span>
     </div>
     <div class="left">
       <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
+      <span class="dot dot2"></span>
       <span class="dot dot3"></span>
       <span class="dot dot4"></span>
     </div>
     <div class="top">
       <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
+      <span class="dot dot2"></span>
       <span class="dot dot3"></span>
       <span class="dot dot4"></span>
       <span class="dot dot5"></span>
     </div>
     <div class="bottom">
       <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
+      <span class="dot dot2"></span>
       <span class="dot dot3"></span>
       <span class="dot dot4"></span>
       <span class="dot dot5"></span>
       <span class="dot dot6"></span>
     </div>
   </div>
-</section>
+
+</div>
+
+<div class="container cube2Container">
+
+
+  <div class="shaddow"></div>
+  <div id="cube2" #cubeGesture (swipe)="rollDice($event)" [ngClass]="{'hideDice': !showMultiple}">
+    <div class="front">
+      <span class="dot dot1"></span>
+    </div>
+    <div class="back">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+    </div>
+    <div class="right">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+    </div>
+    <div class="left">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+      <span class="dot dot4"></span>
+    </div>
+    <div class="top">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+      <span class="dot dot4"></span>
+      <span class="dot dot5"></span>
+    </div>
+    <div class="bottom">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+      <span class="dot dot4"></span>
+      <span class="dot dot5"></span>
+      <span class="dot dot6"></span>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- <section class="container">
+  <div class="shaddow"></div>
+  <div id="cube2" #cubeGesture (swipe)="rollDice($event)">
+    <div class="front">
+      <span class="dot dot1"></span>
+    </div>
+    <div class="back">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+    </div>
+    <div class="right">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+    </div>
+    <div class="left">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+      <span class="dot dot4"></span>
+    </div>
+    <div class="top">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+      <span class="dot dot4"></span>
+      <span class="dot dot5"></span>
+    </div>
+    <div class="bottom">
+      <span class="dot dot1"></span>
+      <span class="dot dot2"></span>
+      <span class="dot dot3"></span>
+      <span class="dot dot4"></span>
+      <span class="dot dot5"></span>
+      <span class="dot dot6"></span>
+    </div>
+  </div>
+</section> -->

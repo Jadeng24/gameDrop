@@ -21,7 +21,7 @@ ion-content {
         width: 130px;
         height: 180px;
         max-width: 250px;
-        background: none;
+        // background: none;
         border: solid 4px var(--ion-color-primary);
 
         ion-icon {
@@ -33,22 +33,28 @@ ion-content {
         }
       }
       .dice {
-        border: solid 4px rgba(0, 203, 218, 0.8);
+        border: solid 4px rgba(0, 203, 218, 0.7);
+        background: rgba(0, 203, 218, 0.45);
       }
       .score {
-        border: solid 4px rgba(212, 200, 20, 0.8);
+        border: solid 4px rgba(212, 200, 20, 0.7);
+        background: rgba(212, 200, 20, 0.45);
       }
       .timer {
-        border: solid 4px rgba(212, 66, 241, 0.8);
+        border: solid 4px rgba(212, 66, 241, 0.7);
+        background: rgba(212, 66, 241, 0.45);
       }
       .draw {
-        border: solid 4px rgba(253, 144, 41, 0.8);
+        border: solid 4px rgba(253, 144, 41, 0.7);
+        background: rgba(253, 144, 41, 0.45);
       }
       .backpack {
-        border: solid 4px rgba(112, 80, 255, 0.8);
+        border: solid 4px rgba(112, 80, 255, 0.7);
+        background: rgba(112, 80, 255, 0.45);
       }
       .coinToss {
-        border: solid 4px rgba(31, 194, 153, 0.8);
+        border: solid 4px rgba(31, 194, 153, 0.7);
+        background: rgba(31, 194, 153, 0.45);
       }
     }
   }

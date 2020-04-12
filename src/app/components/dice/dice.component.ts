@@ -8,29 +8,33 @@ import { Component, OnInit, ViewChild, Renderer2, ElementRef } from '@angular/co
 export class DiceComponent implements OnInit {
 
   public cube: HTMLElement;
+  public cube2: HTMLElement;
+  public showMultiple = true;
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
-
-    this.cube = document.getElementById('cube');
-
     const min = 1;
     const max = 24;
 
+    this.cube = document.getElementById('cube');
     this.cube.onclick = (() => {
       const xRandom = this.getRandom(max, min);
       const yRandom = this.getRandom(max, min);
-      console.log('xRandom', xRandom);
-      console.log('xRandom', yRandom);
-
       this.cube.style.transform = 'rotateX(' + xRandom + 'deg) rotateY(' + yRandom + 'deg)';
     });
 
-
-
+    this.cube2 = document.getElementById('cube2');
+    this.cube2.onclick = (() => {
+      const xRandom = this.getRandom(max, min);
+      const yRandom = this.getRandom(max, min);
+      this.cube2.style.transform = 'rotateX(' + xRandom + 'deg) rotateY(' + yRandom + 'deg)';
+    });
   }
 
-  getRandom(max, min) {
+  /**
+   * Generates a random number given a min and max value
+   */
+  getRandom(max: number, min: number) {
     return (Math.floor(Math.random() * (max - min)) + min) * 90;
   }
 
