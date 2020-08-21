@@ -30,5 +30,6 @@ export class HomeComponent implements OnInit {
 
   public sendToRecents(modalComp) {
     this.updateRecents.emit(modalComp);
+    console.log('hello world');
   }
 }
