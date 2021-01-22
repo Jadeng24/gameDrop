@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ThemeService } from '../services/theme.service';
 import { IonSlides } from '@ionic/angular';
+// import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
 
 @Component({
   selector: 'app-landing',
@@ -9,7 +10,10 @@ import { IonSlides } from '@ionic/angular';
 })
 export class LandingPage implements OnInit {
   @ViewChild('mySlider', { static: true }) slides: IonSlides;
-  constructor(private themeService: ThemeService) { }
+  constructor(
+    private themeService: ThemeService,
+    // private navigationBar: NavigationBar
+  ) { }
 
   public slideOpts = {
     initialSlide: 0,
@@ -20,6 +24,8 @@ export class LandingPage implements OnInit {
 
   ngOnInit() {
     this.themeService.enableDark();
+    // const autoHide = true;
+    // this.navigationBar.setUp(autoHide);
   }
 
   goTo(slide: number) {

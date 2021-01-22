@@ -12,6 +12,7 @@ import { SettingsComponent } from '../components/settings/settings.component';
 import { HomeHeaderComponent } from '../components/home-header/home-header.component';
 import { DiceComponent } from '../components/dice/dice.component';
 import { ScorekeeperComponent } from '../components/scorekeeper/scorekeeper.component';
+import { GameSetupComponent } from '../components/game-setup/game-setup.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ScorekeeperComponent } from '../components/scorekeeper/scorekeeper.comp
 
     RouterModule.forChild([{ path: '', component: LandingPage }])
   ],
-  declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent, SettingsComponent, DiceComponent, ScorekeeperComponent],
+  declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent,
+    SettingsComponent, DiceComponent, ScorekeeperComponent, GameSetupComponent],
   entryComponents: [DiceComponent, ScorekeeperComponent]
 })
 export class LandingPageModule { }

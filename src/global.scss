@@ -12,11 +12,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
 }
+
+// Styling for Modal holding various components
+.closeModal {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  flex-direction: column;
+  color: white;
+  font-size: 16px;
+  ion-icon {
+    font-size: 24pt;
+  }
+}
+
 .box {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self:center;
   padding: 2px;
   min-height: 25px;
   min-width: 25px;
@@ -59,11 +75,11 @@
   }
   10% {
     transform: scale(0.94);
-    opacity: .7;
+    opacity: 0.7;
   }
   100% {
-    transform:  scale(0.93);
-    opacity: .6;
+    transform: scale(0.93);
+    opacity: 0.6;
   }
 }
 
