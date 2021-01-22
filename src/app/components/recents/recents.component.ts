@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { RecentsService } from 'src/app/services/recents.service';
 
 @Component({
   selector: 'app-recents',
@@ -7,10 +8,14 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class RecentsComponent implements OnInit, OnChanges {
   @Input() newGame: any;
-  array = [];
-  constructor() { }
+  recents = [];
 
-  ngOnInit() {}
+  constructor(private recentsService: RecentsService) { }
+
+  ngOnInit() {
+    this.recents = this.recentsService.getRecents();
+    console.log('inited');
+  }
 
   ngOnChanges() {
     this.addTo(this.newGame);
@@ -18,8 +23,8 @@ export class RecentsComponent implements OnInit, OnChanges {
   /**
    * Receives a new game history
    */
-  public addTo(game) {
-    this.array.push(game);
-    console.log(game);
+  public addTo(game: string) {
+    console.log('getRecents');
+    this.recents = this.recentsService.getRecents();
   }
 }

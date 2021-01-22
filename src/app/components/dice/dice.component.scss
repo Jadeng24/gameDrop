@@ -2,10 +2,13 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-
+.closeModal {
+  z-index: 10;
+  cursor: pointer;
+}
 .container {
   width: 200px;
-  height: 250px; 
+  height: 250px;
   position: relative;
   margin: 0 auto 40px;
   // border: 1px solid #FFF;

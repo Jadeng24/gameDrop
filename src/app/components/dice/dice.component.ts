@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, Renderer2, ElementRef } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dice',
@@ -10,7 +11,7 @@ export class DiceComponent implements OnInit {
   public cube: HTMLElement;
   public cube2: HTMLElement;
   public showMultiple = true;
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private modalController: ModalController) { }
 
   ngOnInit() {
     const min = 1;
@@ -37,5 +38,4 @@ export class DiceComponent implements OnInit {
   getRandom(max: number, min: number) {
     return (Math.floor(Math.random() * (max - min)) + min) * 90;
   }
-
 }
