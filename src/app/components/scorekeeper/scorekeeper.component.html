@@ -1,0 +1,25 @@
+<div class="flex closeModal">
+  <ion-icon name="arrow-down-outline"></ion-icon>Swipe down to close
+</div>
+<div class="flex bottomButton">
+  <ion-fab vertical="bottom" horizontal="start">
+    <ion-fab-button>
+      <ion-icon name="cube-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button (click)="showMultiple = false">1</ion-fab-button>
+      <ion-fab-button (click)="showMultiple = true">2</ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</div>
+
+
+<div class="flex container">
+
+  <app-game-setup class="gameSetup"></app-game-setup>
+  <!-- <div class="box">
+    <div class="flex">
+      <span></span>
+    </div>
+  </div> -->
+</div>
