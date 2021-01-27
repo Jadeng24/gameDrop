@@ -2,19 +2,19 @@
   <ion-slides #mySlider pager="false" [options]="slideOpts" (ionSlideDidChange)="slideChanged()">
     <ion-slide>
 
-      <ion-content>
+      <ion-content *ngIf="currentSlide === 0 || currentSlide === 1">
         <app-home (goTo)="goTo($event)" (updateRecents)="addToRecents($event)"></app-home>
       </ion-content>
     </ion-slide>
 
     <ion-slide>
-      <ion-content>
+      <ion-content *ngIf="currentSlide === 1 || currentSlide === 0">
         <app-recents [newGame]="newRecentGame"></app-recents>
       </ion-content>
     </ion-slide>
 
     <ion-slide>
-      <ion-content>
+      <ion-content *ngIf="currentSlide === 1 || currentSlide === 2">
         <app-settings></app-settings>
       </ion-content>
     </ion-slide>

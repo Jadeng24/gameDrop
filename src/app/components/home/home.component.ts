@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { RecentsService } from 'src/app/services/recents.service';
 import { DiceComponent } from '../dice/dice.component';
 import { ScorekeeperComponent } from '../scorekeeper/scorekeeper.component';
+import * as moment from 'moment';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,11 +14,39 @@ export class HomeComponent implements OnInit {
   @Output() updateRecents = new EventEmitter();
 
   constructor(public modalController: ModalController, private recentsService: RecentsService) { }
-  dice = { component: DiceComponent, name: 'Dice' };
-  scorekeeper = { component: ScorekeeperComponent, name: 'ScoreKeeper' };
-  timer = { component: ScorekeeperComponent, name: 'Timer' };
+  dice = {
+    component: DiceComponent,
+    name: 'Dice',
+    lastUsed: null
+  };
+  scorekeeper = {
+    component: ScorekeeperComponent,
+    name: 'Scorekeeper',
+    lastUsed: null
+  };
+  timer = {
+    component: ScorekeeperComponent,
+    name: 'Timer',
+    lastUsed: null
+  };
+  draw = {
+    component: ScorekeeperComponent,
+    name: 'Draw',
+    lastUsed: null
+  };
+  inventory = {
+    component: ScorekeeperComponent,
+    name: 'Inventory',
+    lastUsed: null
+  };
+  cointoss = {
+    component: ScorekeeperComponent,
+    name: 'Coin Toss',
+    lastUsed: null
+  };
 
   ngOnInit() { }
+
 
   goToPage(page: number) {
     this.goTo.emit(page);
@@ -28,8 +57,9 @@ export class HomeComponent implements OnInit {
       component: modalComp.component,
       swipeToClose: false,
     });
-    this.recentsService.updateRecents(modalComp.name)
-    this.sendToRecents(modalComp);
+    modalComp.lastUsed = moment();
+    this.recentsService.updateRecents(modalComp);
+    // this.sendToRecents(modalComp);
     return await modal.present();
   }
 
@@ -38,6 +68,6 @@ export class HomeComponent implements OnInit {
    * @param modalComp selected Component
    */
   public sendToRecents(modalComp: any) {
-    this.updateRecents.emit(modalComp.name);
+    this.updateRecents.emit(modalComp);
   }
 }

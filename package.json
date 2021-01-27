@@ -30,6 +30,8 @@
     "cordova-ios": "^5.1.1",
     "cordova-plugin-navigationbar": "^1.0.31",
     "core-js": "^2.5.4",
+    "moment": "^2.29.1",
+    "ngx-moment": "^5.0.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

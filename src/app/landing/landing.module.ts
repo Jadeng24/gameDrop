@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { MomentModule } from 'ngx-moment';
 
 import { LandingPage } from './landing.page';
 import { RouterModule } from '@angular/router';
@@ -20,7 +21,7 @@ import { ModalButtonComponent } from '../modal-button/modal-button.component';
     CommonModule,
     FormsModule,
     IonicModule,
-
+    MomentModule,
     RouterModule.forChild([{ path: '', component: LandingPage }])
   ],
   declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent,

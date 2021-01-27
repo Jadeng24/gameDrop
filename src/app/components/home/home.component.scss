@@ -4,12 +4,8 @@ ion-content ion-toolbar {
 ion-content {
   .container {
     height: 100%;
-    background-image: url(../../../assets/pinstriped-suit.png);
-    // background: linear-gradient(
-    //   120deg,
-    //   var(--ion-color-primary),
-    //   var(--ion-color-secondary)
-    // );
+    background-image: url(../../../assets/cartographer.png);
+    background-size: 110%;
     padding: 8px;
     .content {
       flex-wrap: wrap;
@@ -34,27 +30,33 @@ ion-content {
       }
       .dice {
         border: solid 3px rgba(0, 203, 218, 0.7);
-        background: rgba(0, 203, 218, 0.45);
+        box-shadow: -3px 4px 12px rgba(0, 58, 63, 0.9);
+        background: rgba(0, 203, 218, 0.35);
       }
       .score {
         border: solid 3px rgba(212, 200, 20, 0.7);
-        background: rgba(212, 200, 20, 0.45);
+        box-shadow: -3px 4px 12px rgba(82, 77, 8, 0.9);
+        background: rgba(212, 200, 20, 0.35);
       }
       .timer {
         border: solid 3px rgba(212, 66, 241, 0.7);
-        background: rgba(212, 66, 241, 0.45);
+        box-shadow: -3px 4px 12px rgba(86, 26, 97, 0.9);
+        background: rgba(212, 66, 241, 0.35);
       }
       .draw {
         border: solid 3px rgba(253, 144, 41, 0.7);
-        background: rgba(253, 144, 41, 0.45);
+        box-shadow: -3px 4px 12px rgba(83, 47, 13, 0.9);
+        background: rgba(253, 144, 41, 0.35);
       }
       .backpack {
         border: solid 3px rgba(112, 80, 255, 0.7);
-        background: rgba(112, 80, 255, 0.45);
+        box-shadow: -3px 4px 12px rgba(44, 31, 100, 0.9);
+        background: rgba(112, 80, 255, 0.35);
       }
       .coinToss {
         border: solid 3px rgba(31, 194, 153, 0.7);
-        background: rgba(31, 194, 153, 0.45);
+        box-shadow: -3px 4px 12px rgba(11, 73, 58, 0.9);
+        background: rgba(31, 194, 153, 0.35);
       }
     }
   }

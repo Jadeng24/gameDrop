@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RecentsService {
-  public recents: Array<string> = [];
+  public recents: Array<any> = [];
 
   constructor() { }
 
   updateRecents(game: string) {
-    this.recents.push(game);
+    this.recents.unshift(game);
   }
   getRecents() {
     console.log('returning recents', this.recents);

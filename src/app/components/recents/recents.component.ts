@@ -15,7 +15,6 @@ export class RecentsComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.recents = this.recentsService.getRecents();
     console.log('initialized Recents');
-
   }
 
   ngOnChanges() {
