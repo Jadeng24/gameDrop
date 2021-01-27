@@ -7,14 +7,15 @@ import { MomentModule } from 'ngx-moment';
 
 import { LandingPage } from './landing.page';
 import { RouterModule } from '@angular/router';
+import { CountdownComponent } from '../countdown/countdown.component';
+import { DiceComponent } from '../components/dice/dice.component';
+import { GameSetupComponent } from '../components/game-setup/game-setup.component';
 import { HomeComponent } from '../components/home/home.component';
+import { HomeHeaderComponent } from '../components/home-header/home-header.component';
+import { ModalButtonComponent } from '../modal-button/modal-button.component';
 import { RecentsComponent } from '../components/recents/recents.component';
 import { SettingsComponent } from '../components/settings/settings.component';
-import { HomeHeaderComponent } from '../components/home-header/home-header.component';
-import { DiceComponent } from '../components/dice/dice.component';
 import { ScorekeeperComponent } from '../components/scorekeeper/scorekeeper.component';
-import { GameSetupComponent } from '../components/game-setup/game-setup.component';
-import { ModalButtonComponent } from '../modal-button/modal-button.component';
 
 @NgModule({
   imports: [
@@ -25,8 +26,8 @@ import { ModalButtonComponent } from '../modal-button/modal-button.component';
     RouterModule.forChild([{ path: '', component: LandingPage }])
   ],
   declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent,
-    SettingsComponent, DiceComponent, ScorekeeperComponent, GameSetupComponent, ModalButtonComponent],
-  entryComponents: [DiceComponent, ScorekeeperComponent, ModalButtonComponent],
+    SettingsComponent, CountdownComponent, DiceComponent, ScorekeeperComponent, GameSetupComponent, ModalButtonComponent],
+  entryComponents: [CountdownComponent, DiceComponent, ScorekeeperComponent, ModalButtonComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LandingPageModule { }

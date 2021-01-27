@@ -4,6 +4,7 @@ import { RecentsService } from 'src/app/services/recents.service';
 import { DiceComponent } from '../dice/dice.component';
 import { ScorekeeperComponent } from '../scorekeeper/scorekeeper.component';
 import * as moment from 'moment';
+import { CountdownComponent } from 'src/app/countdown/countdown.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,9 +25,9 @@ export class HomeComponent implements OnInit {
     name: 'Scorekeeper',
     lastUsed: null
   };
-  timer = {
-    component: ScorekeeperComponent,
-    name: 'Timer',
+  countdown = {
+    component: CountdownComponent,
+    name: 'Countdown',
     lastUsed: null
   };
   draw = {
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit {
     name: 'Coin Toss',
     lastUsed: null
   };
+
 
   ngOnInit() { }
 
