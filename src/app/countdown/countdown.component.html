@@ -1,0 +1,8 @@
+<app-modal-button></app-modal-button>
+
+
+<div class="container flex">
+  {{time.get('seconds')}}
+  <ion-button color="primary" (click)="toggleCountdown()">Start</ion-button>
+  <ion-button color="tertiary" (click)="toggleCountdown()">Stop</ion-button>
+</div>
