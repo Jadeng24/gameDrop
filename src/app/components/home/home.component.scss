@@ -4,11 +4,12 @@ ion-content ion-toolbar {
 ion-content {
   .container {
     height: 100%;
-    background: linear-gradient(
-      120deg,
-      var(--ion-color-primary),
-      var(--ion-color-secondary)
-    );
+    background-image: url(../../../assets/pinstriped-suit.png);
+    // background: linear-gradient(
+    //   120deg,
+    //   var(--ion-color-primary),
+    //   var(--ion-color-secondary)
+    // );
     padding: 8px;
     .content {
       flex-wrap: wrap;
@@ -21,39 +22,38 @@ ion-content {
         width: 130px;
         height: 180px;
         max-width: 250px;
-        // background: none;
-        border: solid 4px var(--ion-color-primary);
+        border: solid 3px var(--ion-color-primary);
 
         ion-icon {
           margin-bottom: 8px;
         }
         span {
-          border-top-left-radius: 6px;
-          border-top-right-radius: 6px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
         }
       }
       .dice {
-        border: solid 4px rgba(0, 203, 218, 0.7);
+        border: solid 3px rgba(0, 203, 218, 0.7);
         background: rgba(0, 203, 218, 0.45);
       }
       .score {
-        border: solid 4px rgba(212, 200, 20, 0.7);
+        border: solid 3px rgba(212, 200, 20, 0.7);
         background: rgba(212, 200, 20, 0.45);
       }
       .timer {
-        border: solid 4px rgba(212, 66, 241, 0.7);
+        border: solid 3px rgba(212, 66, 241, 0.7);
         background: rgba(212, 66, 241, 0.45);
       }
       .draw {
-        border: solid 4px rgba(253, 144, 41, 0.7);
+        border: solid 3px rgba(253, 144, 41, 0.7);
         background: rgba(253, 144, 41, 0.45);
       }
       .backpack {
-        border: solid 4px rgba(112, 80, 255, 0.7);
+        border: solid 3px rgba(112, 80, 255, 0.7);
         background: rgba(112, 80, 255, 0.45);
       }
       .coinToss {
-        border: solid 4px rgba(31, 194, 153, 0.7);
+        border: solid 3px rgba(31, 194, 153, 0.7);
         background: rgba(31, 194, 153, 0.45);
       }
     }

@@ -1,4 +1,8 @@
 .closeModal {
   z-index: 10;
   cursor: pointer;
+  > ion-button {
+    align-self: flex-end;
+    margin: 4px 8px;
+  }
 }

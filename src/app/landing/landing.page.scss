@@ -7,18 +7,17 @@
   border-right: solid 1px transparent;
   border-left: solid 1px transparent;
   border-bottom: solid 2px transparent;
-
   ion-icon {
     transition: 1s;
   }
 }
 .activeTab {
-  transition: .5s;
+  transition: 0.2s;
   border-right: solid 1px #222;
   border-left: solid 1px #222;
   border-bottom: solid 3px var(--ion-color-primary);
   ion-icon {
-    transition: .3s;
+    transition: 0.3s;
     color: var(--ion-color-primary);
   }
 }

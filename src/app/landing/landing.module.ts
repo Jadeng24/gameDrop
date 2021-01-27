@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -25,6 +25,7 @@ import { ModalButtonComponent } from '../modal-button/modal-button.component';
   ],
   declarations: [LandingPage, HomeComponent, HomeHeaderComponent, RecentsComponent,
     SettingsComponent, DiceComponent, ScorekeeperComponent, GameSetupComponent, ModalButtonComponent],
-  entryComponents: [DiceComponent, ScorekeeperComponent, ModalButtonComponent]
+  entryComponents: [DiceComponent, ScorekeeperComponent, ModalButtonComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LandingPageModule { }

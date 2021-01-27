@@ -14,7 +14,8 @@ export class RecentsComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.recents = this.recentsService.getRecents();
-    console.log('inited');
+    console.log('initialized Recents');
+
   }
 
   ngOnChanges() {
@@ -24,7 +25,6 @@ export class RecentsComponent implements OnInit, OnChanges {
    * Receives a new game history
    */
   public addTo(game: string) {
-    console.log('getRecents');
     this.recents = this.recentsService.getRecents();
   }
 }
